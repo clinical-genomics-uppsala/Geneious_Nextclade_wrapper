@@ -1,4 +1,4 @@
-#! <path to your Python installation directory> 
+#!/usr/bin/env python3
 
 # This script runs the nextclade analysis on sequencing data. 
 # It can either be directily run in the terminal (command: python nc_terminal.py <sequence data> <batch name>)
@@ -22,6 +22,9 @@ def terminal(var_name):
     output, error= subprocess.Popen(var_name, universal_newlines=True,stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
     return output
 
+def slash_correct(path, symbol):
+    correct_path = path.replace("\\", symbol)
+    return correct_path
 
 # obtain today's date for the folder name
 today = str(date.today())
@@ -35,7 +38,13 @@ batch_name=sys.argv[2]  # Name of the batch. Can be modified in Geneious.
 path=""
 
 # This is the path where all nextclade's output files should be saved.
-output_path="/home/ete03/Documents/clinical_genomics/"
+output_path=sys.argv[6]
+output_path=slash_correct(output_path, "/")
+
+# Correct end by adding / if necessary 
+if (output_path[-1] != "/"):
+    output_path+="/"
+
 nextclade_name= "nextclade_analysis_{}".format(today)
 
 # get a list of folders present in output_path
@@ -53,7 +62,8 @@ while nextclade_name in onlyfiles:
 output_permanent = output_path+nextclade_name
 
 # Path to where nextclade is installed.
-nextclade_path="/home/ete03/miniconda3/bin/nextclade"
+nextclade_path=sys.argv[4]
+nextclade_path=slash_correct(nextclade_path, "/")
 
 output=path+"output/"   #Path to where your results should be saved.
 

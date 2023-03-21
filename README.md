@@ -39,7 +39,7 @@ First install the [Geneious Wrapper Plugin Creator](https://www.geneious.com/api
     - 'Command Line'
    	    - Windows: '[inputFileNames] nextclade [otherOptions]'
    	    - Linux/Mac: '[inputFileNames] nextclade [otherOptions]’
-    - Under 'Output' 'File Name:' fill in 'pangolin' and select 'Format:' 'Text file (plain)'
+    - Under 'Output' 'File Name:' fill in 'nextclade' and select 'Format:' 'Text file (plain)'
 4. Step 3:
     Press 'Add' to add two user options (in this order):   
     - 'Command Line Switch': pathToNextclade, 'Option Label': Nextclade path  

@@ -8,6 +8,7 @@
 ## System requirements
 - Geneious 2021.1.1 or later (for older versions it may be possible to install the plugin from source)
 - Python 3
+- Nextclade ([Installation instructions](https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-cli.html))
 
 ## Mac or linux
 1. Download `nextclade_linux_mac_x.x.gplugin`

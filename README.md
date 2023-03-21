@@ -1,7 +1,5 @@
 # Geneious wrapper plugin for Nextclade
 
-# Geneious wrapper plugin for Nextclade
-
 [Geneious](https://www.geneious.com) wrapper plugin to run [Nextclade](https://clades.nextstrain.org/) for clade assignment, mutations calling and quality checks of SARS-CoV-2 genomes. The plugin accesses Nextclade’s latest data set used to assign clades to SARS-CoV-2 sequencing data. 
 
 - Input: SARS-CoV-2 genome sequence(s). To run on multiple sequences, first create a sequence list in Geneious.

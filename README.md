@@ -1,4 +1,4 @@
-# Geneious_Nextclade_wrapper
+# Geneious wrapper plugin for Nextclade
 
 # Geneious wrapper plugin for Nextclade
 
